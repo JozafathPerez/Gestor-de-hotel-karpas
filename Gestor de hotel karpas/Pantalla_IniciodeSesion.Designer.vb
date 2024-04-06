@@ -28,14 +28,18 @@ Partial Class Pantalla_IniciodeSesion
         TxCuenta = New TextBox()
         TxContrasena = New TextBox()
         BtInicioSesion = New Button()
+        LogoCuenta = New PictureBox()
+        LogoContrasena = New PictureBox()
         CType(LogoPrincipal, ComponentModel.ISupportInitialize).BeginInit()
+        CType(LogoCuenta, ComponentModel.ISupportInitialize).BeginInit()
+        CType(LogoContrasena, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label_InicioSesion
         ' 
         Label_InicioSesion.AutoSize = True
-        Label_InicioSesion.Font = New Font("Segoe UI", 36.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label_InicioSesion.Location = New Point(468, 290)
+        Label_InicioSesion.Font = New Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label_InicioSesion.Location = New Point(391, 306)
         Label_InicioSesion.Name = "Label_InicioSesion"
         Label_InicioSesion.Size = New Size(359, 65)
         Label_InicioSesion.TabIndex = 0
@@ -45,7 +49,7 @@ Partial Class Pantalla_IniciodeSesion
         ' 
         LogoPrincipal.ErrorImage = CType(resources.GetObject("LogoPrincipal.ErrorImage"), Image)
         LogoPrincipal.Image = CType(resources.GetObject("LogoPrincipal.Image"), Image)
-        LogoPrincipal.Location = New Point(497, 0)
+        LogoPrincipal.Location = New Point(424, 0)
         LogoPrincipal.Name = "LogoPrincipal"
         LogoPrincipal.Size = New Size(282, 303)
         LogoPrincipal.TabIndex = 1
@@ -53,16 +57,18 @@ Partial Class Pantalla_IniciodeSesion
         ' 
         ' TxCuenta
         ' 
-        TxCuenta.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TxCuenta.Location = New Point(524, 380)
+        TxCuenta.Text = "Cuenta"
+        TxCuenta.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TxCuenta.Location = New Point(451, 383)
         TxCuenta.Name = "TxCuenta"
         TxCuenta.Size = New Size(255, 29)
         TxCuenta.TabIndex = 2
         ' 
         ' TxContrasena
         ' 
-        TxContrasena.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TxContrasena.Location = New Point(524, 442)
+        TxContrasena.Text = "Contraseña"
+        TxContrasena.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TxContrasena.Location = New Point(451, 443)
         TxContrasena.Name = "TxContrasena"
         TxContrasena.Size = New Size(255, 29)
         TxContrasena.TabIndex = 3
@@ -71,19 +77,39 @@ Partial Class Pantalla_IniciodeSesion
         ' 
         BtInicioSesion.BackColor = Color.Orange
         BtInicioSesion.ForeColor = SystemColors.ActiveCaptionText
-        BtInicioSesion.Location = New Point(573, 501)
+        BtInicioSesion.Location = New Point(496, 494)
         BtInicioSesion.Name = "BtInicioSesion"
         BtInicioSesion.Size = New Size(165, 42)
         BtInicioSesion.TabIndex = 4
         BtInicioSesion.Text = "Iniciar Sesión"
         BtInicioSesion.UseVisualStyleBackColor = False
         ' 
+        ' LogoCuenta
+        ' 
+        LogoCuenta.Image = CType(resources.GetObject("LogoCuenta.Image"), Image)
+        LogoCuenta.Location = New Point(401, 374)
+        LogoCuenta.Name = "LogoCuenta"
+        LogoCuenta.Size = New Size(47, 48)
+        LogoCuenta.TabIndex = 5
+        LogoCuenta.TabStop = False
+        ' 
+        ' LogoContrasena
+        ' 
+        LogoContrasena.Image = CType(resources.GetObject("LogoContrasena.Image"), Image)
+        LogoContrasena.Location = New Point(398, 428)
+        LogoContrasena.Name = "LogoContrasena"
+        LogoContrasena.Size = New Size(47, 44)
+        LogoContrasena.TabIndex = 6
+        LogoContrasena.TabStop = False
+        ' 
         ' Pantalla_IniciodeSesion
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.Control
-        ClientSize = New Size(1284, 861)
+        ClientSize = New Size(1215, 636)
+        Controls.Add(LogoContrasena)
+        Controls.Add(LogoCuenta)
         Controls.Add(BtInicioSesion)
         Controls.Add(TxContrasena)
         Controls.Add(TxCuenta)
@@ -92,6 +118,8 @@ Partial Class Pantalla_IniciodeSesion
         Name = "Pantalla_IniciodeSesion"
         Text = "Pantalla_IniciodeSesion"
         CType(LogoPrincipal, ComponentModel.ISupportInitialize).EndInit()
+        CType(LogoCuenta, ComponentModel.ISupportInitialize).EndInit()
+        CType(LogoContrasena, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -101,5 +129,7 @@ Partial Class Pantalla_IniciodeSesion
     Friend WithEvents TxCuenta As TextBox
     Friend WithEvents TxContrasena As TextBox
     Friend WithEvents BtInicioSesion As Button
+    Friend WithEvents LogoCuenta As PictureBox
+    Friend WithEvents LogoContrasena As PictureBox
 
 End Class
